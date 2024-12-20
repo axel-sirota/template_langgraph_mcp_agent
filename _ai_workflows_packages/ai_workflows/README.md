@@ -79,9 +79,6 @@ poetry install
 
 # Activate environment
 source .venv/bin/activate  # (or .\.venv\Scripts\activate on Windows)
-
-# Configure API key
-echo "GROQ_API_KEY=your-key-here" > .env
 ```
 
 ### 3. Create Your First Workflow
