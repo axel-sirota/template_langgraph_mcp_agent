@@ -1,163 +1,131 @@
-# 🚀 Workflows library
+<div align="center">
+  <h1>🏭 AI Workflows Library</h1>
+  <p><i>Transform chaotic AI interactions into reliable, repeatable processes</i></p>
+</div>
 
-> "Workflows turn complex AI tasks into reliable, repeatable processes."
+## 🎯 What's This?
 
-This folder contains generic, reusable workflows that can be used across different projects.
+This library contains battle-tested workflows that turn complex AI tasks into systematic processes. Think of them as recipes that:
+- ✨ Work reliably every time
+- 📈 Scale across teams
+- 🔄 Improve with each use
+- 🎓 Anyone can learn and use
 
-⚠️ For project-specific workflows, create a `_ai_workflows` folder in your project directory instead.
+## 📁 Library Structure
 
-## 📁 Structure
-
-```
-_ai_workflows/            # Generic, reusable workflows
-├── factory/              # Workflows for creating new workflows
-│   ├── new_workflow/     # Creates a new workflow
-│   └── new_instructions/ # Creates a new instructions file
-├── templates/            # Templates for workflows or instructions files
-└── [use_case]/           # Workflows organized by use case (e.g., communication/)
-    ├── instructions/
-    │   └── instructions_v1.0.0.md
-    └── run.md
-```
-
-## 🎯 Generic vs project-specific workflows
-
-### Generic workflows
-Located in the root `_ai_workflows/` folder, these are reusable across different projects:
 ```
 _ai_workflows/
-├── factory/
-├── templates/
-└── communication/      # Example: generic communication workflows
-    ├── event_invite/
-    ├── linkedin_post/
-    ├── ...
+├── factory/              # Create new workflows & instructions
+│   ├── new_workflow/     # Bootstrap a complete workflow
+│   └── new_instructions/ # Generate instructions files
+├── templates/            # Reusable workflow templates
+└── [use_case]/          # Purpose-specific workflows
+    ├── instructions/     # AI collaboration guidelines
+    └── run.md           # Ready-to-use execution script
 ```
 
-### Project-specific workflows
-Located in a `_ai_workflows/` folder within your project, these are tailored to project needs:
+## 🚀 Quick Start
+
+### Using a Workflow
+1. Open Cursor AI's Composer (CMD/CTRL + I)
+2. Copy any `run.md` file content
+3. Fill in your specific inputs
+4. Press Enter and watch the magic happen!
+
+### Creating a Workflow
+Best option: Use our factory workflow
+1. Go to `factory/new_workflow/`
+2. Follow `run.md`
+3. Get a professional workflow structure in seconds
+
+## 💡 Two Ways to Use This Library
+
+### 1. Generic Workflows (in this folder)
+Perfect for common tasks that work across projects:
 ```
-my_project/
-├── _ai_workflows/      # Project-specific workflows
-│   ├── data_curation/
-│   ├── paper_writing/
-│   ├── ...
-```
-
-## 💡 Workflows vs instructions files
-
-### Workflows
-- For **repeated tasks** that follow the same pattern
-- Example: Writing bug ticket instructions
-- Has both `instructions/` folder and `run.md`
-- Is refined over time through multiple uses
-- Version controlled (v1.0.0, v1.1.0, etc.)
-
-### Instructions files
-- For **one-time complex projects**
-- Example: Resolving a specific bug ticket
-- Single file: `instructions_v1.0.0.md`
-- Also is refined and version controlled, but usually stops evolving after the project is complete
-
-**Example:**
-```
-project/
-├── _ai_workflows/
-│   └── ticket_resolution/  # Workflow for generic ticket resolution
-│       ├── instructions/
-│       │   └── instructions_v1.0.0.md
-│       └── run.md
-└── ticket_resolutions/
-    └── ticket_number_123/
-        └── instructions_v1.0.0.md  # Instructions that evolve with the ticket, until its resolution
+_ai_workflows/
+├── communication/    # Email templates, posts...
+├── documentation/    # Technical writing, guides...
+└── code_review/     # Code analysis, improvements...
 ```
 
-## 🚀 Getting started
-
-### Using an existing workflow
-
-1. Open Composer (CMD + I (MacOS) or CTRL + I (Windows))
-2. Copy-paste the content of the workflow's `run.md`
-3. Adapt the inputs to your needs
-4. Press Enter
-
-For more details, see the tutorials in `_ai_tutorials`.
-
-### Creating a new workflow
-
-#### Option 1: Using factory workflow (recommended)
-1. Navigate to `_ai_workflows/factory/new_workflow/`
-2. Follow the instructions in `run.md`
-3. The factory will bootstrap a new workflow structure
-
-#### Option 2: Manual creation
-1. Create your workflow folder:
+### 2. Project-Specific Workflows
+Create a `_ai_workflows/` folder in your project:
 ```
-your_workflow/
-├── instructions/
+your_project/
+├── _ai_workflows/   # Your custom workflows
+│   ├── data_prep/
+│   └── analysis/
+└── src/
+```
+
+## 🎓 Understanding Workflow Types
+
+### Complete Workflows
+For repeatable processes:
+```
+workflow_name/
+├── instructions/    # AI guidelines
 │   └── instructions_v1.0.0.md
-└── run.md
+└── run.md          # Execution script
 ```
-2. Copy an existing workflow or use templates from `_ai_workflows/templates/`
-3. Customize for your needs
 
-## 🛠️ Maintenance
+### Single Instructions
+For one-time complex tasks:
+```
+project_name/
+└── instructions_v1.0.0.md
+```
 
-### Version control
-- Use semantic versioning (vX.Y.Z)
-- Document changes in version history
+## ⚡ Best Practices
+
+### Version Control
+- Use semantic versioning (v1.0.0)
+- Document changes clearly
 - Keep previous versions for reference
 
-### Quality control
-- Generated files should include a `__validation_required` suffix (see the `.cursorrules` file specifying this)
-- Always validate generated files (and remove the suffix after validation)
-- Test workflows with various inputs
-- Collect and incorporate feedback
+### Quality Assurance
+- Files get `__validation_required` suffix
+- Always validate outputs
+- Remove suffix after validation
+- Test with various inputs
 
-### Best practices
-- One purpose per workflow
-- Clear instructions file
-- Standardized inputs
+### Design Principles
+- One clear purpose per workflow
+- Standardized inputs/outputs
 - Clear validation criteria
-- Regular reviews and updates
+- Regular improvements
 
-## 📚 Resources
+## 🛠️ Current Limitations & Roadmap
 
-- See the full tutorial in `_ai_tutorials/2_ai_workflows/tutorial_en.md`
-- Use factory workflows in `factory/` to get started
+### File-Based System
+Current limitations:
+- Manual version control
+- Basic collaboration features
+- No built-in branching
+
+### Coming Soon
+We're working on:
+- Git integration
+- Automated validation
+- Collaborative editing
+- Change tracking
+
+## 📚 Learn More
+
+- 📖 Full tutorial: `_ai_tutorials/2_ai_workflows/tutorial_en.md`
+- 🏭 Start with: `factory/new_workflow/run.md`
+- 📺 Watch: [AI Workflows Tutorial](https://youtu.be/YRzHOVCkmA0)
 
 ## 🤝 Contributing
 
-1. Follow the existing structure
-2. Add workflows to your project (in a `_ai_workflows/` subfolder)
-3. Document usage and provide examples in a README.md file if needed
-4. Contribute to generic workflows in `_ai_workflows/` only when you've mastered the process
-
-## ⚠️ Current limitations
-
-### File-based versioning
-The current system relies on a shared file structure on a server, which has some limitations:
-- No built-in change history
-- Manual version management
-- Limited collaboration features
-- No branching capabilities
-- Risk of concurrent modifications
-
-### Future improvements
-Ideally, this system should be enhanced with:
-- A Git repository for proper version control
-- Branch-based workflow development
-- Pull request reviews for quality control
-- Automated validation checks
-- Proper conflict resolution
-- Change history and traceability
-
-Until then, be extra careful when modifying shared workflows and always:
-- Communicate changes to the team
-- Keep backup copies of critical workflows
-- Document all modifications in version history
-- Test changes thoroughly before deployment
+1. Master existing workflows first
+2. Test in your projects
+3. Document thoroughly
+4. Share improvements
 
 ---
 
-**Note**: This is a living document! Share your feedback and improvements to help our workflow library grow and evolve.
+<div align="center">
+  <sub>Built with ❤️ by AI Swiss</sub>
+</div>

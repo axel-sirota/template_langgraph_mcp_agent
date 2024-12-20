@@ -1,31 +1,50 @@
-# AI tutorials
+# AI Tutorials by AI Swiss
 
-This repository contains Brain2Brain.Lab session materials from the AI Swiss association.
+Welcome to our collection of professional-grade AI tutorials! These materials come from Brain2Brain.Lab sessions, where we transform complex AI concepts into practical, actionable knowledge.
 
-## Important note
+## ⚠️ Important Note
 
-⚠️ If you plan to run any of the use cases from these tutorials, please make sure to copy the tutorial folder to a different location first. This will prevent any unintended modifications to the original tutorial materials.
+Before running any tutorial examples, please copy the tutorial folder to your workspace. This ensures you can experiment freely while preserving the original materials for reference.
 
-## Contents
+## 🎯 Contents
 
-### 1. Cursor AI tutorial
+### 1. Master Cursor AI
 Located in `1_cursor_ai/`
 
-A comprehensive presentation on leveraging Cursor AI as an AI assistant interface. The session explores why Cursor AI offers superior interaction capabilities compared to traditional interfaces like ChatGPT and similar platforms.
+Discover why developer-focused AI interfaces like Cursor AI dramatically outperform traditional chatbots. Learn professional techniques that apply to any AI interaction, whether you're coding or not.
 
-**Start here**: `1_cursor_ai/1_interface_et_fonctionnalités/tutoriel/tutoriel_en.md`
+**Start Here**: `1_cursor_ai/1_interface_et_fonctionnalités/tutoriel/tutoriel_en.md`  
+📺 **Watch Tutorial**: [Mastering Cursor AI](https://www.youtube.com/watch?v=niPQvA7uxxk)
 
-📺 Watch the presentation: [YouTube Video](https://www.youtube.com/watch?v=niPQvA7uxxk)
-
-### 2. AI workflows at scale
+### 2. AI Workflows at Scale
 Located in `2_ai_workflows/`
 
-This presentation focuses on strategies and best practices for managing AI workflows at scale in production environments.
+Transform experimental AI prompts into robust, production-ready workflows. Learn battle-tested strategies for maintaining quality and consistency across your organization.
 
-**Start here**: `2_ai_workflows/tutorial_en.md`
+**Start Here**: `2_ai_workflows/tutorial.md`  
+📺 **Watch Tutorial**: [Building Production AI Workflows](https://youtu.be/YRzHOVCkmA0)
 
-📺 Watch the presentation: [YouTube Video](https://youtu.be/YRzHOVCkmA0)
+### 3. AI Workflows as Code
+Located in `3_ai_workflows_as_code/`
 
-## About Brain2Brain.Lab
+Take your AI workflows to the next level with software engineering best practices. Learn to create maintainable, version-controlled, and scalable solutions that grow with your needs.
 
-Brain2Brain.Lab sessions are educational workshops organized by the AI Swiss association, focusing on practical applications and advanced concepts in artificial intelligence.
+**Start Here**: `3_ai_workflows_as_code/tutorial.md`  
+📺 **Watch Series**: [AI Swiss Channel](https://www.youtube.com/@A-Iswiss)
+
+## 🎓 About Brain2Brain.Lab
+
+Brain2Brain.Lab workshops bridge the gap between AI theory and practice. We believe everyone deserves access to professional-grade AI tools and knowledge. Our sessions focus on:
+
+- 🚀 Practical, hands-on learning
+- 🛠️ Production-ready techniques
+- 🎯 Real-world applications
+- 🤝 Knowledge sharing
+
+Join us in making AI accessible, practical, and powerful for everyone!
+
+---
+
+<div align="center">
+  <b>Ready to level up your AI game? Start with any tutorial above! 🚀</b>
+</div>

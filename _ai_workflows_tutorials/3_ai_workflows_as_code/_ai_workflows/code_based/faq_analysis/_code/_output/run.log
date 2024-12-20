@@ -1,0 +1,221 @@
+2024-12-17 19:25:46,178 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2024-12-17 19:25:48,477 - ai_workflows.context - INFO - Setting up vector store in: _output/_data/faq_analysis
+2024-12-17 19:25:48,486 - ai_workflows.context - INFO - Found existing collection with 6 documents
+2024-12-17 19:25:48,487 - ai_workflows.context - INFO - Creating new collection faq_analysis
+2024-12-17 19:25:50,125 - ai_workflows.context - INFO - Vector store setup complete
+2024-12-17 19:25:50,129 - ai_workflows.workflow - INFO - Starting workflow: faq_analysis
+2024-12-17 19:25:50,129 - ai_workflows.context - INFO - Loading 2 sources
+2024-12-17 19:25:50,130 - ai_workflows.context - INFO - Loading source: faq_url from https://www.letemps.ch/questions-frequentes
+2024-12-17 19:25:50,130 - ai_workflows.context - INFO - Loading source: faq_url (url) from https://www.letemps.ch/questions-frequentes
+2024-12-17 19:25:50,890 - ai_workflows.context - INFO - Raw document metrics for faq_url:
+- Documents: 1
+- Total size: 12,540 chars
+- Average size: 12,540 chars/doc
+2024-12-17 19:25:50,891 - ai_workflows.context - INFO - Chunk metrics for faq_url:
+- Chunks: 5
+- Total size: 13,017 chars
+- Average chunk: 2,603 chars
+- Size ratio: 103.8% of original
+2024-12-17 19:25:51,123 - ai_workflows.context - INFO - Vector store update for faq_url:
+- Previous docs: 0
+- Added docs: 5
+- Current docs: 5
+2024-12-17 19:25:51,126 - ai_workflows.context - INFO - Collection now has 5 documents
+2024-12-17 19:25:51,127 - ai_workflows.context - INFO - Loading source: new_questions from /Users/ch1962/Documents/AI Swiss/Repositories/local/2024-12_workflows_ia_code/_ai_workflows/code_based/faq_analysis/_context/new_questions.md
+2024-12-17 19:25:51,127 - ai_workflows.context - INFO - Loading source: new_questions (file) from /Users/ch1962/Documents/AI Swiss/Repositories/local/2024-12_workflows_ia_code/_ai_workflows/code_based/faq_analysis/_context/new_questions.md
+2024-12-17 19:25:51,128 - ai_workflows.context - INFO - Raw document metrics for new_questions:
+- Documents: 1
+- Total size: 394 chars
+- Average size: 394 chars/doc
+2024-12-17 19:25:51,129 - ai_workflows.context - INFO - Chunk metrics for new_questions:
+- Chunks: 1
+- Total size: 394 chars
+- Average chunk: 394 chars
+- Size ratio: 100.0% of original
+2024-12-17 19:25:51,175 - ai_workflows.context - INFO - Vector store update for new_questions:
+- Previous docs: 5
+- Added docs: 1
+- Current docs: 6
+2024-12-17 19:25:51,175 - ai_workflows.context - INFO - Collection now has 6 documents
+2024-12-17 19:25:51,181 - ai_workflows.graph - INFO - 
+==================================================
+Task 1/5 (20%): extract_faq
+- Description: - Analyse la page web fournie
+- Extrait TOUTES les paires questions-réponses
+- Structure les données...
+- Required inputs: 1
+- Expected outputs: 1
+==================================================
+2024-12-17 19:25:51,182 - ai_workflows.graph - INFO - Fetching context from sources: ['faq_url']
+2024-12-17 19:25:51,182 - ai_workflows.context - INFO - Searching context:
+- Query: - Analyse la page web fournie - Extrait TOUTES les paires questions-réponses - Structure les données...
+- Query length: 261 chars
+- Sources: faq_url
+- Max docs: 5
+2024-12-17 19:25:51,218 - ai_workflows.context - INFO - Search results overview:
+- Found documents: 5
+- Search time: 0.036s
+- Best match: 42.1%
+- Average match: 33.5%
+- Weakest match: 22.9%
+2024-12-17 19:25:51,218 - ai_workflows.context - INFO - Final context assembly:
+- Documents used: 5
+- Total size: 13,106 chars
+- Average chunk: 2,621 chars
+- Sources used: faq_url
+- Source coverage: 1/1
+2024-12-17 19:25:51,219 - ai_workflows.graph - INFO - Context summary for extract_faq:
+- Parts: 1
+- Total size: 13,106 chars
+- Average part size: 13,106 chars
+2024-12-17 19:25:52,800 - groq._base_client - INFO - Retrying request to /openai/v1/chat/completions in 3.000000 seconds
+2024-12-17 19:26:04,149 - ai_workflows.graph - INFO - Task extract_faq completed:
+- Execution time: 12.93s
+- Output size: 7,566 chars
+- Saved outputs: ['faq_existante']
+2024-12-17 19:26:04,152 - ai_workflows.graph - INFO - 
+==================================================
+Task 2/5 (40%): analyze_questions
+- Description: - Compare avec la FAQ existante
+- Identifie les questions non couvertes
+- Évalue la pertinence pour ...
+- Required inputs: 2
+- Expected outputs: 1
+==================================================
+2024-12-17 19:26:04,152 - ai_workflows.graph - INFO - Fetching context from sources: ['new_questions']
+2024-12-17 19:26:04,152 - ai_workflows.context - INFO - Searching context:
+- Query: - Compare avec la FAQ existante - Identifie les questions non couvertes - Évalue la pertinence pour ...
+- Query length: 517 chars
+- Sources: new_questions
+- Max docs: 5
+2024-12-17 19:26:04,195 - ai_workflows.context - INFO - Search results overview:
+- Found documents: 1
+- Search time: 0.043s
+- Best match: 25.8%
+- Average match: 25.8%
+- Weakest match: 25.8%
+2024-12-17 19:26:04,195 - ai_workflows.context - INFO - Final context assembly:
+- Documents used: 1
+- Total size: 413 chars
+- Average chunk: 413 chars
+- Sources used: new_questions
+- Source coverage: 1/1
+2024-12-17 19:26:04,195 - ai_workflows.graph - INFO - Fetching outputs from tasks: [('extract_faq', 'faq_existante')]
+2024-12-17 19:26:04,196 - ai_workflows.graph - INFO - Context summary for analyze_questions:
+- Parts: 2
+- Total size: 8,028 chars
+- Average part size: 4,014 chars
+2024-12-17 19:26:04,531 - groq._base_client - INFO - Retrying request to /openai/v1/chat/completions in 57.000000 seconds
+2024-12-17 19:27:04,945 - ai_workflows.graph - INFO - Task analyze_questions completed:
+- Execution time: 60.75s
+- Output size: 2,524 chars
+- Saved outputs: ['analyse_questions']
+2024-12-17 19:27:04,947 - ai_workflows.graph - INFO - 
+==================================================
+Task 3/5 (60%): generate_suggestions
+- Description: Pour chaque nouvelle question pertinente :
+- Génère 2 propositions de réponses différentes
+- Adapte ...
+- Required inputs: 1
+- Expected outputs: 1
+==================================================
+2024-12-17 19:27:04,948 - ai_workflows.graph - INFO - Fetching outputs from tasks: [('extract_faq', 'faq_existante'), ('analyze_questions', 'analyse_questions')]
+2024-12-17 19:27:04,948 - ai_workflows.graph - INFO - Context summary for generate_suggestions:
+- Parts: 2
+- Total size: 10,191 chars
+- Average part size: 5,096 chars
+2024-12-17 19:27:05,234 - groq._base_client - INFO - Retrying request to /openai/v1/chat/completions in 41.000000 seconds
+2024-12-17 19:27:49,926 - ai_workflows.graph - INFO - Task generate_suggestions completed:
+- Execution time: 44.98s
+- Output size: 3,115 chars
+- Saved outputs: ['suggestions']
+2024-12-17 19:27:49,929 - ai_workflows.graph - INFO - 
+==================================================
+Task 4/5 (80%): create_report
+- Description: Crée un rapport consolidant :
+- Résumé de l'analyse depuis `analyse_questions`
+- Liste des nouvelles...
+- Required inputs: 1
+- Expected outputs: 1
+==================================================
+2024-12-17 19:27:49,929 - ai_workflows.graph - INFO - Fetching outputs from tasks: [('analyze_questions', 'analyse_questions'), ('generate_suggestions', 'suggestions')]
+2024-12-17 19:27:49,930 - ai_workflows.graph - INFO - Context summary for create_report:
+- Parts: 2
+- Total size: 5,747 chars
+- Average part size: 2,874 chars
+2024-12-17 19:27:50,198 - groq._base_client - INFO - Retrying request to /openai/v1/chat/completions in 30.000000 seconds
+2024-12-17 19:28:25,622 - ai_workflows.graph - INFO - Task create_report completed:
+- Execution time: 35.69s
+- Output size: 3,405 chars
+- Saved outputs: ['rapport_final']
+2024-12-17 19:28:25,624 - ai_workflows.graph - INFO - 
+==================================================
+Task 5/5 (100%): validate_outputs
+- Description: Vérifie :
+- [ ] Extraction complète de la FAQ existante
+- [ ] Pertinence des nouvelles questions ide...
+- Required inputs: 1
+- Expected outputs: 1
+==================================================
+2024-12-17 19:28:25,625 - ai_workflows.graph - INFO - Fetching outputs from tasks: [('extract_faq', 'faq_existante'), ('analyze_questions', 'analyse_questions'), ('generate_suggestions', 'suggestions'), ('create_report', 'rapport_final')]
+2024-12-17 19:28:25,625 - ai_workflows.graph - INFO - Context summary for validate_outputs:
+- Parts: 4
+- Total size: 16,818 chars
+- Average part size: 4,204 chars
+2024-12-17 19:28:25,957 - groq._base_client - INFO - Retrying request to /openai/v1/chat/completions in 58.000000 seconds
+2024-12-17 19:29:30,171 - ai_workflows.graph - INFO - Task validate_outputs completed:
+- Execution time: 64.54s
+- Output size: 3,405 chars
+- Saved outputs: ['validation_report']
+2024-12-17 19:29:30,178 - ai_workflows.workflow - INFO - Workflow faq_analysis completed in 220.0s
+Tasks executed: 5
+Total output size: 20015 chars
+2024-12-17 19:29:30,178 - __main__ - INFO - 
+Final content:
+2024-12-17 19:29:30,178 - __main__ - INFO - # Rapport de consolidation
+
+## Résumé de l'analyse
+
+L'analyse des nouvelles questions a permis d'identifier 6 questions non couvertes par la FAQ existante, ainsi que 2 questions similaires à celles déjà présentes dans la FAQ. Les questions non couvertes concernent principalement la gestion des abonnements, les options de mise à niveau, la flexibilité des abonnements et la possibilité de résilier un abonnement.
+
+## Liste des nouvelles questions
+
+1. Comment puis-je passer d'un abonnement Digital à un abonnement Premium ?
+2. Est-ce que je peux mettre mon abonnement en pause pendant mes vacances ?
+3. Combien de personnes peuvent utiliser le même compte abonné simultanément ?
+4. Comment puis-je résilier mon abonnement ?
+5. Puis-je offrir un abonnement au Temps à quelqu'un d'autre ?
+6. Est-ce que vos journalistes techniques tiennent la route ?
+
+## Suggestions de réponses
+
+Les suggestions de réponses pour chacune des questions non couvertes sont les suivantes :
+
+1. Comment puis-je passer d'un abonnement Digital à un abonnement Premium ?
+ * Contacter le Service Clients au +41 (0) 22 539 10 75 ou par e-mail à relationclients@letemps.ch
+ * Se rendre sur la page d'abonnement et suivre les instructions pour mettre à niveau l'abonnement
+2. Est-ce que je peux mettre mon abonnement en pause pendant mes vacances ?
+ * Oui, il est possible de mettre l'abonnement en pause en contactant le Service Clients au moins 5 jours ouvrables avant la date souhaitée
+ * Gérer l'abonnement en ligne en se connectant au compte et en suivant les instructions pour mettre l'abonnement en pause
+3. Combien de personnes peuvent utiliser le même compte abonné simultanément ?
+ * Le nombre de personnes dépend des conditions de l'abonnement, contacter le Service Clients pour obtenir des informations spécifiques
+ * En général, les abonnements sont conçus pour une utilisation personnelle, contacter le Service Clients pour discuter des options disponibles et des conditions applicables
+4. Comment puis-je résilier mon abonnement ?
+ * Contacter le Service Clients au +41 (0) 22 539 10 75 ou par e-mail à relationclients@letemps.ch
+ * Se rendre sur la page d'abonnement et suivre les instructions pour résilier l'abonnement
+5. Puis-je offrir un abonnement au Temps à quelqu'un d'autre ?
+ * Oui, il est possible d'offrir un abonnement en contactant le Service Clients pour obtenir des informations sur les options de cadeau disponibles et les conditions applicables
+ * Se rendre sur la page d'abonnement et suivre les instructions pour offrir un abonnement à quelqu'un d'autre
+
+## Recommandations de priorisation
+
+Les questions non couvertes ont été classées par ordre de pertinence, avec les questions les plus pertinentes en premier :
+
+1. Comment puis-je résilier mon abonnement ? (Pertinence : 5/5)
+2. Comment puis-je passer d'un abonnement Digital à un abonnement Premium ? (Pertinence : 5/5)
+3. Est-ce que je peux mettre mon abonnement en pause pendant mes vacances ? (Pertinence : 4/5)
+4. Combien de personnes peuvent utiliser le même compte abonné simultanément ? (Pertinence : 4/5)
+5. Puis-je offrir un abonnement au Temps à quelqu'un d'autre ? (Pertinence : 4/5)
+6. Est-ce que vos journalistes techniques tiennent la route ? (Pertinence : 2/5)
+
+Il est recommandé de traiter en priorité les questions les plus pertinentes, en commençant par celles qui concernent la résiliation et la mise à niveau des abonnements.

@@ -8,119 +8,139 @@
 </div>
 
 <p align="center">
-  <a href="#-the-ai-challenge">Challenge</a> •
+  <a href="#-the-challenge">Challenge</a> •
   <a href="#-our-solution">Solution</a> •
-  <a href="#-get-started-in-30-seconds">Get Started</a> •
-  <a href="#-whats-inside">Tutorials</a> •
-  <a href="#-about-brain2brainlabs">About</a>
+  <a href="#-get-started">Get Started</a> •
+  <a href="#-whats-inside">What's Inside</a> •
+  <a href="#-about">About</a>
 </p>
 
-## 🎯 The AI Challenge
+## 🎯 The Challenge
 
-We're all stuck between:
-- 🎮 Consumer interfaces that feel like toys
-- 🔒 Rigid proprietary solutions that cost a lot and lock us in
-
-The solution? Empower everyone to build their own AI workflows - no expensive middlemen needed.
+We've all been there:
+- 🎲 AI interactions that work great... sometimes
+- 📝 Prompts you keep rewriting from scratch
+- 🤹 Juggling between different AI tools and interfaces
+- 📊 No way to scale what works well
 
 ## 💡 Our Solution
 
-A battle-tested approach that:
+A complete toolkit that helps you:
 
-### For individuals
-- 🚀 Empowers anyone to do much more than on ChatGPT and the likes
-- 🔄 Enables complex reproducible workflows
-- 🤝 Adapts to your specific needs
-- 🛡️ Keeps you in control
+### 1. Start Simple with Text
+- ✍️ Write clear instructions in plain text
+- 🔄 Iterate quickly with AI assistants
+- 📋 Keep track of what works
+- 🎓 Learn as you go
 
-### For organizations
-- ✅ Makes success repeatable and traceable
-- 🤝 Enables knowledge sharing between colleagues
-- 📋 Integrates with quality management systems
+### 2. Scale What Works
+- 📦 Package successful workflows
+- 🤝 Share with your team
+- 📈 Improve systematically
+- ✅ Validate results reliably
 
-### Compare approaches:
+### 3. Power Up with Code
+- 🚀 Run workflows automatically
+- 🔌 Connect to your tools
+- 🎮 Control every detail
+- 📊 Process data at scale
 
-**Without workflows**
+## 🚀 Get Started
+
+### 1. Copy These Files
+```bash
+# Get the core files
+git clone https://github.com/cbardyn/ai-swiss-workflows
+cd ai-swiss-workflows
+
+# Copy what you need:
+├── _ai_workflows/           # Text-based workflows
+├── _ai_workflows_packages/  # Python framework for code-based workflows
+└── .cursorrules             # General instructions for Cursor AI
 ```
-Prompt → AI → Result → Hope
+
+### 2. Choose Your Path
+
+#### Start with Text (Recommended)
+Perfect for learning and quick wins:
+1. Open any `run.md` file in `_ai_workflows/`
+2. Follow the instructions
+3. See results immediately
+
+#### Jump to Code
+Ready for more power:
+```bash
+# Install the framework
+cd _ai_workflows_packages/ai_workflows
+poetry install
+
+# Try an example
+cd ../../_ai_workflows/code_based/faq_analysis/_code
+python run.py
 ```
-- ❌ "Works every other Tuesday"
-- ❌ "Only Bob knows the secret sauce"
-- ❌ "Training the team? Good luck with that"
-- ❌ "Quality control? More like quality roulette"
-
-**With workflows**
-```
-Proven workflow → Systematic validation → Continuous improvement → 🎯
-```
-- ✅ "Works like Swiss clockwork"
-- ✅ "Even the intern can do it"
-- ✅ "30 minutes and you're a pro"
-- ✅ "Swiss-quality results you can bet your job on"
-
-## 🎯 Get Started in 30 Seconds
-
-1. Copy these files wherever you need AI workflows:
-   ```
-   # Works great in:
-   ├── Personal projects
-   ├── Code repositories
-   ├── Shared drives
-   ├── Obsidian vaults
-   └── Any structured content
-   
-   # Files to copy:
-   ├── _ai_workflows/     # Factory workflows to get started
-   └── .cursorrules       # AI validation rules
-   ```
-
-2. That's it! Use the factory workflows in `_ai_workflows/` to create your own.
-
-Need guidance? Check `_ai_workflows_tutorials/` for detailed guides and examples.
 
 ## 📚 What's Inside
 
-### [1. Core Workflows](_ai_workflows/README.md)
-Ready-to-use workflows to create new workflows or instructions files for co-creation with AI.
+### [1. Text-Based Workflows](_ai_workflows/README.md)
+Turn AI interactions into reliable processes:
+- 📝 Clear instructions files
+- ✅ Built-in validation
+- 🔄 Version control
+- 🤝 Easy to share
 
-### [2. Cursor AI Mastery](1_cursor_ai/1_interface_et_fonctionnalités/tutoriel/tutoriel_en.md)
-Discover why Cursor AI and similar developer interfaces outperform ChatGPT and the likes for any type of use case beyond coding alone.
+### [2. Python Framework](_ai_workflows_packages/ai_workflows/README.md)
+Power up your workflows with code:
+- 🚀 Run workflows anywhere
+- 🔌 Connect to external tools
+- 🎮 Full control over execution
+- 📊 Handle data at scale
 
-> 🇨🇭 Originally created for an AI Swiss Brain2Brain.Lab workshop in Swiss French! English translations available in `*_en.md` files.
+### [3. Tutorials](_ai_workflows_tutorials/README.md)
+Learn step by step:
+1. **Master Cursor AI**: Better than ChatGPT for any task
+2. **Create Text-Based Workflows**: From experiments to reliable processes
+3. **Transform Into Code-Based Workflows**: Add Python power when needed
 
-### [3. Production AI Workflows](2_ai_workflows/tutorial_en.md)
-Learn battle-tested strategies for:
-- 🏗️ Designing evolutive workflows
-- 🤖 Automating complex processes
-- 🎯 Maintaining control & flexibility
+## 🎓 Learning Path
 
-> 🇨🇭 Originally created for an AI Swiss Brain2Brain.Lab workshop in Swiss French! English translations available in `*_en.md` files.
+### 1. Start with Cursor AI
+Learn why developer interfaces beat regular chatbots:
+- 📂 Better context handling
+- ⚡ Powerful shortcuts
+- 🔍 Code-aware features
+- 🤝 Smooth collaboration
 
-## 🎓 About Brain2Brain.Labs
+### 2. Master AI Workflows
+Transform chaotic AI interactions into systems:
+- 📋 Clear instructions
+- ✅ Quality checks
+- 🔄 Continuous improvement
+- 📈 Easy scaling
 
-Brain2Brain.Lab workshops by AI Swiss empower people to be agents of change in the AI revolution. We believe that:
-- 🎯 Understanding AI shouldn't be limited to tech experts
-- 🛠️ Everyone deserves access to professional-grade AI tools
-- 🤝 Sharing knowledge creates ripples of positive change in society
+### 3. Add Code Power
+Take control when you need it:
+- 🚀 Automate everything
+- 🔌 Connect your tools
+- 📊 Handle big data
+- 🎮 Full flexibility
 
-Our workshops bridge the gap between theoretical concepts and real-world implementation, giving you the understanding and tools to:
-- 🚀 Master AI tools beyond surface-level usage
-- 🏗️ Build solutions to real-world problems
-- 📚 Share knowledge with your communities
-- 🌱 Drive positive change in your environment
+## 🎯 Choose Your Tools
 
-<div align="center">
+### Text Workflows When You Need
+- 🚀 Quick results
+- 🗣️ Natural interaction
+- 🔄 Fast iterations
+- 👥 Team collaboration
 
-### Connect & Learn
-
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-AI_Swiss-blue?style=flat-square&logo=linkedin)](https://www.linkedin.com/company/ai-suisse/)
-[![Website](https://img.shields.io/badge/Web-AI_Swiss-blue?style=flat-square&logo=google-chrome)](https://www.a-i.swiss/en)
-
-</div>
+### Code Framework When You Need
+- ⚡ Automation
+- 🔌 Integration
+- 📊 Data processing
+- 🎮 Precise control
 
 ## 📄 License
 
-MIT License - feel free to use and adapt for your needs.
+MIT License - make it yours!
 
 ---
 
