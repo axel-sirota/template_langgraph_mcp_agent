@@ -3,167 +3,116 @@
   <p><i>Transform AI Assistant Chats into Powerful Python Code</i></p>
 </div>
 
-## 🎯 Why This Framework?
+## Why This Framework?
 
 You love working with AI assistants - writing instructions in plain text, having natural conversations, getting quick results. But sometimes you need more:
 
-- 🔄 Want to run the same workflow reliably, again and again?
-- 📊 Need to process data from multiple sources first?
-- 🎮 Want precise control over how the AI thinks?
-- 🤝 Need to integrate with your existing tools?
+- Want to run the same workflow reliably, again and again?
+- Need to process data from multiple sources first?
+- Want precise control over how the AI thinks?
+- Need to integrate with your existing tools?
 
 That's where this framework comes in. It helps you transform your text-based AI workflows into Python code that:
-- 🚀 Runs independently of any AI assistant
-- 🛠️ Uses proven open-source libraries
-- 🎯 Gives you complete control over execution
-- 📈 Adapts to your needs
+- Runs independently of any AI assistant
+- Uses proven open-source libraries
+- Gives you complete control over execution
+- Adapts to your needs
 
-## ⚡ Quick Example
+## Prerequisites
 
-```python
-from ai_workflows import Workflow
+1. **Python Environment**
+   - Python 3.10 or higher
+   - Poetry (package manager)
 
-# Transform your text instructions into code
-workflow = Workflow(
-    config_path='config.yaml',             # Choose your AI tools
-    instructions_path='instructions.yaml'  # Define your workflow
-)
+2. **API Access to AI Models**
+   - You can for example create a free account at [Groq](https://console.groq.com) and generate an API key
 
-# Run it anywhere!
-result = workflow.run()
-```
+## Quick Example
 
-## 🧩 Core Components
+See the [FAQ Analysis example](_ai_workflows/code_based/faq_analysis) for a complete working example.
 
-### 1. Instructions File (tasks.yaml)
-Your workflow, structured but still readable:
-```yaml
-goal: "Analyze customer feedback"
-tasks:
-  - key: 'extract_topics'
-    description: 'Find main topics in feedback'
-    inputs:
-      - from_context: ['feedback.csv']
-    outputs:
-      - key: 'topics'
-        file: 'topics.md'
-```
+## Installation
 
-### 2. AI Tools Config (config.yaml)
-Choose your preferred AI models and settings:
-```yaml
-llm:
-  type: "langchain_groq.ChatGroq"
-  model_name: "llama-3.3-70b-versatile"
-  temperature: 0  # Precise outputs
+1. **Get the Code**
+   - Clone the repository: `git clone https://github.com/cbardyn/ai-swiss-workflows`
+   - Navigate to package: `cd _ai_workflows_packages/ai_workflows`
 
-embeddings:
-  type: "langchain_huggingface.HuggingFaceEmbeddings"
-  model_name: "all-MiniLM-L6-v2"
-```
+2. **Install Dependencies**
+   - Install with Poetry: `poetry install`
+   - Activate environment:
+     - Linux/macOS: `source .venv/bin/activate`
+     - Windows: `.\.venv\Scripts\activate`
 
-## 🚀 Getting Started
+3. **Verify Installation**
+   - Try running an example: `cd ../../_ai_workflows/code_based/faq_analysis/_code && python run.py`
 
-### 1. Install Requirements
-- Python 3.10+
-- Poetry (package manager)
+## Step-by-Step Usage Guide
 
-### 2. Set Up the Framework
-```bash
-# Get the code
-git clone https://github.com/cbardyn/ai-swiss-workflows
-cd _ai_workflows_packages/ai_workflows
+### 1. Create Your Project Structure
+Create three main files in your project directory:
+- config.yaml (AI configuration)
+- instructions.yaml (Your workflow tasks)
+- run.py (Python runner)
 
-# Install dependencies
-poetry install
+### 2. Write Your Instructions File
+In instructions.yaml, define:
+- Your workflow goal
+- Tasks to perform
+- Input files to analyze
+- Output files to generate
 
-# Activate environment
-source .venv/bin/activate  # (or .\.venv\Scripts\activate on Windows)
-```
+Pro tip: Start with a text-based workflow in instructions_v1.0.0.md and use your AI assistant to convert it to YAML format.
 
-### 3. Create Your First Workflow
+### 3. Configure AI Tools
+In config.yaml, specify:
+- Your AI model choice (e.g., Groq's LLaMA)
+- Your API key
+- Model parameters (temperature, etc.)
 
-1. **Write Instructions** (tasks.yaml):
-```yaml
-goal: "Summarize meeting notes"
-tasks:
-  - key: 'extract_key_points'
-    description: 'Identify main decisions and action items'
-    inputs:
-      - from_context: ['meeting_notes.md']
-    outputs:
-      - key: 'summary'
-        file: 'summary.md'
-```
+### 4. Create Your Runner
+In run.py, use the framework to:
+- Set up logging
+- Load your configuration
+- Execute your workflow
 
-2. **Configure AI** (config.yaml):
-```yaml
-llm:
-  type: "langchain_groq.ChatGroq"
-  model_name: "llama-3.3-70b-versatile"
-  temperature: 0
-```
+### 5. Run Your Workflow
+Simply execute: `python run.py`
 
-3. **Run It** (run.py):
-```python
-from ai_workflows import setup_logging, Workflow
+## Getting Help
 
-# Enable helpful logging
-setup_logging()
+1. Check the [FAQ Analysis example](_ai_workflows/code_based/faq_analysis) for a complete working example
+2. Review the code-based workflows [tutorial](_ai_workflows_tutorials/3_ai_workflows_as_code/)
 
-# Create and run your workflow
-workflow = Workflow('config.yaml', 'tasks.yaml')
-result = workflow.run()
-```
-
-## 🛠️ Framework Features
+## Framework Features
 
 ### Smart Context Management
-- 📂 Automatic file loading
-- 🔍 Vector search for relevant info
-- 🧠 Memory across tasks
+The framework automatically:
+- Loads files and URLs
+- Creates searchable vector databases
+- Finds relevant information for each task
 
-### Robust Task Orchestration
-- ⛓️ Sequential task execution
-- 📊 Data passing between tasks
-- 📈 Progress tracking
+### Task Orchestration
+The framework handles:
+- Task sequencing
+- Information passing between tasks
+- Progress tracking
 
-### Professional Error Handling
-- 🚫 Missing file detection
-- 🔄 API failure recovery
-- ⚠️ Configuration validation
+### Error Handling
+Built-in handling for:
+- Missing files
+- API failures
+- Invalid configurations
 
-## 🎯 When to Use This Framework
+## Possible Improvements
 
-### Perfect For:
-- 🔄 Repeatable AI workflows
-- 🎯 Systematic processes
-- 🤝 Team knowledge sharing
-- 🔧 Tool integration
-
-### Maybe Not For:
-- 🤔 One-off creative tasks
-- 💭 Exploratory conversations
-- 🎨 Highly iterative design
-- 📝 Simple text completions
-
-## 🚀 Next Steps
-
-1. Check examples in `_ai_workflows/code_based/*/`
-2. Try the FAQ analyzer demo
-3. Convert your own text workflows
-4. Share improvements!
-
-## 🛠️ Roadmap
-
-We're working on:
-- 🔌 More external connectors (Dropbox, Google Drive)
-- ✅ Automated testing suite
-- 🔒 Enhanced security features
-- ⚡ Parallel task execution
-- 🔄 Backup AI models
-- 💾 Automatic data backups
-- 📊 Performance monitoring
+- More connectors to external systems (Dropbox, Google Drive, etc.)
+- Better testing: No automated tests yet to ensure everything works perfectly
+- Better security: API keys are stored in simple text files
+- Better performance: Tasks run one after another instead of in parallel
+- Better reliability: No backup AI models if the main one fails
+- Better data safety: No automatic backups of your data
+- Better monitoring: Can't track how well the system performs
+- And more!
 
 ---
 

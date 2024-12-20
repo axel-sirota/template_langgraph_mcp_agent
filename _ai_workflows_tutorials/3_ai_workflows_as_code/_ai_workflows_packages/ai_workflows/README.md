@@ -18,17 +18,19 @@ from ai_workflows import Workflow
 
 # Create a workflow from your instructions
 workflow = Workflow(
-    config_path='config.yaml',      # Your AI tools configuration
-    instructions_path='tasks.yaml'  # Your workflow instructions
+    config_path='config.yaml',             # Your AI tools configuration
+    instructions_path='instructions.yaml'  # Your workflow instructions
 )
 
 # Run it!
 result = workflow.run()
 ```
 
+See the [existing code-based workflows](_ai_workflows/code_based) for more concrete examples.
+
 ## Core Components
 
-### 1. Instructions File (tasks.yaml)
+### 1. Instructions File (instructions.yaml)
 Define what you want to do:
 ```yaml
 goal: "Analyze customer feedback"
@@ -45,19 +47,16 @@ Choose your AI tools:
 llm:
   type: "langchain_groq.ChatGroq"
   model_name: "llama-3.3-70b-versatile"
-
-embeddings:
-  type: "langchain_huggingface.HuggingFaceEmbeddings"
-  model_name: "all-MiniLM-L6-v2"
+  temperature: 0  # More precise answers
 ```
 
 ## Installation
 
 1. **Requirements**
-   - Python 3.10
+   - Python 3.10 or higher
    - Poetry (package manager)
 
-2. **Set Up**
+2. **Setup**
    ```bash
    # Get the code
    git clone https://github.com/cbardyn/ai-swiss-workflows
@@ -70,16 +69,10 @@ embeddings:
    source .venv/bin/activate  # (or .\.venv\Scripts\activate on Windows)
    ```
 
-3. **Configure**
-   ```bash
-   # Add your API key
-   echo "GROQ_API_KEY=your-key-here" > .env
-   ```
+## Usage
 
-## How to Use
-
-### 1. Write Your Instructions
-Create `tasks.yaml`:
+### 1. Write An Instructions File
+Create an `instructions.yaml` file:
 ```yaml
 goal: "Your workflow goal"
 tasks:
@@ -91,6 +84,8 @@ tasks:
       - key: 'result'
         file: 'output.md'
 ```
+
+Pro tip: Use your AI assistant to generate this file from an existing text-based workflow (e.g., `instructions_v1.0.0.md`).
 
 ### 2. Configure AI Tools
 Create `config.yaml`:
@@ -109,37 +104,34 @@ from ai_workflows import setup_logging, Workflow
 setup_logging()
 
 # Create and run workflow
-workflow = Workflow('config.yaml', 'tasks.yaml')
+workflow = Workflow(
+    config_path=config_path,             # Path to your config.yaml
+    instructions_path=instructions_path  # Path to your instructions.yaml
+)
 result = workflow.run()
 ```
 
 ## Framework Features
 
 ### Smart Context Management
-```python
-# The framework automatically:
-# - Loads files and URLs
-# - Creates searchable vector database
-# - Finds relevant information for each task
-```
+The framework automatically:
+- Loads files and URLs
+- Creates searchable vector databases
+- Finds relevant information for each task
 
 ### Task Orchestration
-```python
-# The framework handles:
-# - Task sequencing
-# - Information passing between tasks
-# - Progress tracking
-```
+The framework handles:
+- Task sequencing
+- Information passing between tasks
+- Progress tracking
 
 ### Error Handling
-```python
-# Built-in handling for:
-# - Missing files
-# - API failures
-# - Invalid configurations
-```
+Built-in handling for:
+- Missing files
+- API failures
+- Invalid configurations
 
-## Missing Features That We'd Like to Add
+## Possible Improvements
 
 - More connectors to external systems (Dropbox, Google Drive, etc.)
 - Better testing: No automated tests yet to ensure everything works perfectly

@@ -47,6 +47,24 @@ cd _code
 python run.py
 ```
 
+## ⚠️ Before You Start
+
+1. **Set Up Python Environment**
+   - Follow the [setup guide](_ai_workflows_packages/ai_workflows/README.md)
+   - Make sure to activate the Python environment after installation
+
+2. **Get API Access**
+   - Create a free account at [Groq](https://console.groq.com)
+   - Generate an API key
+   - Add your API key to `config.yaml`:
+     ```yaml
+     llm:
+       type: "langchain_groq.ChatGroq"
+       api_key: "your-api-key-here"  # Replace with your actual key
+     ```
+
+Need help? Check the [tutorial](_ai_workflows_tutorials/3_ai_workflows_as_code/) for more information.
+
 ## Compare the Results 📊
 
 Both versions create these files in `_output/`:

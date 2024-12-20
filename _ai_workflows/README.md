@@ -1,73 +1,75 @@
 <div align="center">
   <h1>🏭 AI Workflows Library</h1>
-  <p><i>Transform chaotic AI interactions into reliable, repeatable processes</i></p>
+  <p><i>Turn Complex AI Tasks into Simple, Repeatable Steps</i></p>
 </div>
 
-## 🎯 What's This?
+## What's This Library For?
 
-This library contains battle-tested workflows that turn complex AI tasks into systematic processes. Think of them as recipes that:
-- ✨ Work reliably every time
-- 📈 Scale across teams
-- 🔄 Improve with each use
-- 🎓 Anyone can learn and use
+Ever wished you could:
+- Save your best AI conversations and reuse them?
+- Share your AI expertise with your team?
+- Make sure AI gives you consistent results?
+- Build on what works instead of starting from scratch?
 
-## 📁 Library Structure
+That's exactly what this library helps you do! Think of it as your collection of AI recipes that:
+- Work reliably every time
+- Get better with each use
+- Anyone can learn and apply
+- Scale across teams
 
-```
-_ai_workflows/
-├── factory/              # Create new workflows & instructions
-│   ├── new_workflow/     # Bootstrap a complete workflow
-│   └── new_instructions/ # Generate instructions files
-├── templates/            # Reusable workflow templates
-└── [use_case]/          # Purpose-specific workflows
-    ├── instructions/     # AI collaboration guidelines
-    └── run.md           # Ready-to-use execution script
-```
+## Getting Started
 
-## 🚀 Quick Start
-
-### Using a Workflow
+### 1. Use an Existing Workflow
+It's as simple as:
 1. Open Cursor AI's Composer (CMD/CTRL + I)
 2. Copy any `run.md` file content
-3. Fill in your specific inputs
-4. Press Enter and watch the magic happen!
+3. Fill in your specific details
+4. Press Enter and watch it work!
 
-### Creating a Workflow
-Best option: Use our factory workflow
+### 2. Create Your Own Workflow
+The easiest way:
 1. Go to `factory/new_workflow/`
-2. Follow `run.md`
-3. Get a professional workflow structure in seconds
+2. Follow the steps in `run.md`
+3. Get a professional workflow in seconds
 
-## 💡 Two Ways to Use This Library
+## Library Organization
 
-### 1. Generic Workflows (in this folder)
-Perfect for common tasks that work across projects:
 ```
 _ai_workflows/
-├── communication/    # Email templates, posts...
-├── documentation/    # Technical writing, guides...
-└── code_review/     # Code analysis, improvements...
+├── code_based/            # Workflows with Python automation
+│   └── faq_analysis/      # Example: FAQ improvement workflow
+├── factory/               # Create new workflows
+│   ├── new_workflow/      # Complete workflow template
+│   └── new_instructions/  # Single task template
+├── templates/             # Reusable patterns
+└── text_based/            # Text-only workflows
 ```
 
-### 2. Project-Specific Workflows
-Create a `_ai_workflows/` folder in your project:
-```
-your_project/
-├── _ai_workflows/   # Your custom workflows
-│   ├── data_prep/
-│   └── analysis/
-└── src/
-```
+## Two Ways to Use Workflows
 
-## 🎓 Understanding Workflow Types
+### 1. Text-Based Workflows
+Perfect for when you want to:
+- Experiment quickly
+- Discuss ideas with AI
+- Refine things interactively
+- Keep things simple
+
+### 2. Code-Based Workflows
+Better when you need to:
+- Run things automatically
+- Have more control
+- Integrate with other tools
+- Be independent from AI assistants
+
+## Types of Workflows
 
 ### Complete Workflows
-For repeatable processes:
+For processes you'll repeat:
 ```
 workflow_name/
-├── instructions/    # AI guidelines
+├── instructions/    # Step-by-step guide
 │   └── instructions_v1.0.0.md
-└── run.md          # Execution script
+└── run.md          # Ready to execute
 ```
 
 ### Single Instructions
@@ -77,51 +79,43 @@ project_name/
 └── instructions_v1.0.0.md
 ```
 
-## ⚡ Best Practices
+## Best Practices
 
-### Version Control
-- Use semantic versioning (v1.0.0)
-- Document changes clearly
-- Keep previous versions for reference
+### Keep Track of Changes
+- Use version numbers (v1.0.0)
+- Document what changed
+- Keep previous versions
 
-### Quality Assurance
-- Files get `__validation_required` suffix
-- Always validate outputs
-- Remove suffix after validation
-- Test with various inputs
+### Ensure Quality
+- Files start with `__validation_required`
+- Always check the results
+- Remove the suffix after validation
+- Test with different inputs
 
-### Design Principles
-- One clear purpose per workflow
-- Standardized inputs/outputs
-- Clear validation criteria
+### Design Guidelines
+- One clear goal per workflow
+- Standard inputs and outputs
+- Clear success criteria
 - Regular improvements
 
-## 🛠️ Current Limitations & Roadmap
+## Try an Example
 
-### File-Based System
-Current limitations:
-- Manual version control
-- Basic collaboration features
-- No built-in branching
+Check out the FAQ analysis workflow in `code_based/faq_analysis/`:
+- Text version for quick experiments
+- Code version for automation
+- Complete documentation
+- Ready to use!
 
-### Coming Soon
-We're working on:
-- Git integration
-- Automated validation
-- Collaborative editing
-- Change tracking
+## Learn More
 
-## 📚 Learn More
+- Start by creating your own workflow with our [factory](factory/new_workflow/run.md)
+- Check out the [tutorials](_ai_workflows_tutorials/README.md)
 
-- 📖 Full tutorial: `_ai_tutorials/2_ai_workflows/tutorial_en.md`
-- 🏭 Start with: `factory/new_workflow/run.md`
-- 📺 Watch: [AI Workflows Tutorial](https://youtu.be/YRzHOVCkmA0)
+## Want to Contribute?
 
-## 🤝 Contributing
-
-1. Master existing workflows first
+1. Try existing workflows
 2. Test in your projects
-3. Document thoroughly
+3. Document what you learn
 4. Share improvements
 
 ---

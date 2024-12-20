@@ -101,7 +101,7 @@ cd ../../_ai_workflows/code_based/faq_analysis/_code
 python run.py
 ```
 
-For Python setup instructions, see our [framework guide](_ai_workflows_packages/ai_workflows/README.md).
+For detailed setup instructions (Python, API keys, etc.), see our [framework guide](_ai_workflows_packages/ai_workflows/README.md).
 
 #### Need Help?
 Check `_ai_workflows_tutorials/` for detailed guides and examples.
