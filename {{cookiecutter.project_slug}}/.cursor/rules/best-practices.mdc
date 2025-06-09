@@ -7,66 +7,52 @@ alwaysApply: true
 
 # 1️⃣  Test-Driven Development
 - Generate or update **pytest** tests *before* writing or refactoring 
-code. :contentReference[oaicite:1]{index=1}
+code.
 - Do **not** comment-out or delete failing asserts; fix the code. 
-:contentReference[oaicite:2]{index=2}
 - Discover tests via pytest naming conventions (`test_*.py`, `*_test.py`). 
-:contentReference[oaicite:3]{index=3}
 - Read feature requirements from `tests/specs/*.md` and turn each bullet 
 into tests.
 
 # 2️⃣  Object-Oriented & Pythonic style
 - Follow **SOLID** principles and the “Composition over inheritance” rule. 
-:contentReference[oaicite:4]{index=4}
 - Keep functions < 50 LOC and classes < 400 LOC.
 - Follow **PEP 8** and format code with **Black**; don’t fight the 
-formatter. :contentReference[oaicite:5]{index=5}
+formatter.
 - All public methods must have type hints; enforce with **mypy --strict**. 
-:contentReference[oaicite:6]{index=6}
 
 # 3️⃣  Security & quality gates
 - Run **bandit** on each commit; block high-severity issues. 
-:contentReference[oaicite:7]{index=7}
 - Enable **ruff** for linting and import-sort. 
-:contentReference[oaicite:8]{index=8}
 - Keep dependencies pinned; scan with `pip-audit`.
 
 # 4️⃣  Continuous Integration / Deployment
 - Cursor should read `ci.md` for the organisation-wide rules, then 
 generate a GitHub Actions workflow that:
   1. Runs **tox** with environments: {py, mypy, ruff, bandit}. 
-:contentReference[oaicite:9]{index=9}  
   2. Builds a multi-stage Docker image for production. 
-:contentReference[oaicite:10]{index=10}  
   3. Publishes coverage and security scores.  
 - Use **matrix strategy** to test on 3.10 → 3.12. 
-:contentReference[oaicite:11]{index=11}
 
 # 5️⃣  Docker & deployment
 - Generate lean multi-stage images; final stage may use `python:slim`. 
-:contentReference[oaicite:12]{index=12}
 - Add non-root user and enable `--no-cache-dir` in `pip install`.
 
 # 6️⃣  Cost & performance for agents
 - Integrate an **LLM-call cache** (e.g., `langchain.cache.InMemoryCache`) 
-and key it on `(model, prompt)`. :contentReference[oaicite:13]{index=13}
+and key it on `(model, prompt)`. 
 - Fail fast on repeated identical requests within 10 s to avoid token 
-waste. :contentReference[oaicite:14]{index=14}
+waste. 
 
 # 7️⃣  Extra best practices (15+)
 1. Pre-commit hook with `black`, `ruff`, `mypy`, `bandit`. 
-:contentReference[oaicite:15]{index=15}  
 2. SemVer tags and CHANGELOG adhere to Keep a Changelog.  
 3. Use `pyproject.toml` for single-source build config.  
 4. Pin indirect deps with `pip-tools` or `uv`.  
 5. Use `__future__.annotations` for forward refs.  
 6. Docstrings follow **PEP 257**.  
 7. Enable `pytest --strict-markers`. 
-:contentReference[oaicite:16]{index=16}  
 8. Use session-scope fixtures for one-time expensive setup. 
-:contentReference[oaicite:17]{index=17}  
 9. Cut Docker image size < 200 MB (Slim + `--no-cache`). 
-:contentReference[oaicite:18]{index=18}  
 10. Run `docker scan` (Trivy or Snyk) in CI.  
 11. Store secrets in GitHub Actions *encrypted secrets*, never in plain 
 YAML.  
