@@ -8,7 +8,7 @@ This package helps you run workflows where:
 
 Example:
     ```python
-    from ai_workflows import setup_logging, Workflow
+    from {{cookiecutter.project_slug}} import setup_logging, Workflow
 
     # Set up logging to track progress
     setup_logging()

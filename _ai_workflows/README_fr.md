@@ -35,7 +35,7 @@ La façon la plus simple :
 ## Organisation de la bibliothèque
 
 ```
-_ai_workflows/
+_{{cookiecutter.project_slug}}/
 ├── code_based/            # Workflows avec automatisation Python
 │   └── faq_analysis/      # Exemple : amélioration de FAQ
 ├── factory/               # Création de nouveaux workflows
@@ -109,7 +109,7 @@ Découvrez le workflow d'analyse de FAQ dans `code_based/faq_analysis/` :
 ## En savoir plus
 
 - Commencez par créer votre propre workflow avec notre [factory](factory/new_workflow/run.md)
-- Consultez les [tutoriels](_ai_workflows_tutorials/README.md)
+- Consultez les [tutoriels](_{{cookiecutter.project_slug}}_tutorials/README.md)
 
 ## Envie de contribuer ?
 

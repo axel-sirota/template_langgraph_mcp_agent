@@ -10,12 +10,12 @@ Generate a new instructions file for executing a project, drawing inspiration fr
 
 ## Requirements
 
-IMPORTANT: Create this in the existing `_ai_workflows/factory/new_instructions/` folder, in a sub-folder `_generated/<project_name>/`:
+IMPORTANT: Create this in the existing `_{{cookiecutter.project_slug}}/factory/new_instructions/` folder, in a sub-folder `_generated/<project_name>/`:
 - A folder `instructions` containing a file `instructions_v1.0.0.md`
 
 Folder structure to create:
   ```
-  _ai_workflows/factory/new_instructions/_generated/
+  _{{cookiecutter.project_slug}}/factory/new_instructions/_generated/
     <project_name>/
       instructions/
         instructions_v1.0.0.md

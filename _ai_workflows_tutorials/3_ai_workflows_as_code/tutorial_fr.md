@@ -53,7 +53,7 @@ Vous → Écrivez du YAML structuré → Exécutez du code Python → Obtenez de
 
 ## Comment ce framework aide
 
-Nous avons créé des outils (dans `_ai_workflows_packages/ai_workflows/`) qui vous aident à :
+Nous avons créé des outils (dans `_{{cookiecutter.project_slug}}_packages/{{cookiecutter.project_slug}}/`) qui vous aident à :
 
 1. **Garder des instructions simples**
    ```yaml
@@ -77,7 +77,7 @@ Nous avons créé des outils (dans `_ai_workflows_packages/ai_workflows/`) qui v
 3. **Exécuter n'importe où**
    ```python
    # Code Python simple pour exécuter votre workflow
-   from ai_workflows import Workflow
+   from {{cookiecutter.project_slug}} import Workflow
    
    workflow = Workflow('config.yaml', 'instructions.yaml')
    result = workflow.run()
@@ -91,7 +91,7 @@ Regardons un exemple concret qui :
 - Suggère de nouvelles réponses
 
 ### 1. D'abord, essayez-le en version texte
-Dans `_ai_workflows/code_based/faq_analysis/_text/` :
+Dans `_{{cookiecutter.project_slug}}/code_based/faq_analysis/_text/` :
 
 1. **Écrivez des instructions simples**
    ```markdown
@@ -108,7 +108,7 @@ Dans `_ai_workflows/code_based/faq_analysis/_text/` :
    - Affinez si nécessaire
 
 ### 2. Puis, essayez-le en code
-Dans `_ai_workflows/code_based/faq_analysis/_code/` :
+Dans `_{{cookiecutter.project_slug}}/code_based/faq_analysis/_code/` :
 
 1. **Mêmes instructions, plus structurées**
    ```yaml
@@ -142,7 +142,7 @@ Mais la version code :
    ```bash
    # Récupérez le code
    git clone https://github.com/cbardyn/ai-swiss-workflows
-   cd _ai_workflows_packages/ai_workflows
+   cd _{{cookiecutter.project_slug}}_packages/{{cookiecutter.project_slug}}
    
    # Installez les dépendances
    poetry install
@@ -151,7 +151,7 @@ Mais la version code :
 
 2. **Exécutez l'exemple**
    ```bash
-   cd ../../_ai_workflows/code_based/faq_analysis/_code
+   cd ../../_{{cookiecutter.project_slug}}/code_based/faq_analysis/_code
    python run.py
    ```
 
@@ -176,8 +176,8 @@ Mais la version code :
 - Vous voulez l'indépendance des assistants IA
 
 ## En savoir plus
-- Détails du framework : `_ai_workflows_packages/ai_workflows/README.md`
-- Exemples : `_ai_workflows/code_based/*/README.md`
+- Détails du framework : `_{{cookiecutter.project_slug}}_packages/{{cookiecutter.project_slug}}/README.md`
+- Exemples : `_{{cookiecutter.project_slug}}/code_based/*/README.md`
 
 ---
 

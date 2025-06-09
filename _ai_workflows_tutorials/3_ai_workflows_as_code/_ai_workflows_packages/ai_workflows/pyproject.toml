@@ -5,7 +5,7 @@ requires = ['poetry-core>=1.8.0']
 build-backend = 'poetry.core.masonry.api'
 
 [tool.poetry]
-name = 'ai_workflows'
+name = '{{cookiecutter.project_slug}}'
 version = '1.0.0'
 description = 'Framework for building and executing AI-powered workflow automation'
 license = 'MIT'
@@ -22,7 +22,7 @@ classifiers = [
     'Programming Language :: Python :: 3.10',
 ]
 packages = [
-    {include = 'ai_workflows', from = 'src'},
+    {include = '{{cookiecutter.project_slug}}', from = 'src'},
 ]
 
 [tool.poetry.dependencies]
