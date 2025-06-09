@@ -1,0 +1,1 @@
+- The agent answers 'pong' when sent 'ping'.
