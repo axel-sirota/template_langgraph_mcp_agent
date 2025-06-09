@@ -1,5 +1,10 @@
 {
   "project_slug": "template_langgraph_mcp_agent",
   "project_name": "LangGraph MCP Agent",
-  "author": "YOUR NAME"
+  "author": "YOUR NAME",
+  "_copy_without_render": [
+    ".cursor/**",
+    ".github/workflows/*"
+  ]
 }
+
