@@ -35,7 +35,7 @@ The easiest way:
 ## Library Organization
 
 ```
-_ai_workflows/
+_{{cookiecutter.project_slug}}/
 ├── code_based/            # Workflows with Python automation
 │   └── faq_analysis/      # Example: FAQ improvement workflow
 ├── factory/               # Create new workflows
@@ -109,7 +109,7 @@ Check out the FAQ analysis workflow in `code_based/faq_analysis/`:
 ## Learn More
 
 - Start by creating your own workflow with our [factory](factory/new_workflow/run.md)
-- Check out the [tutorials](_ai_workflows_tutorials/README.md)
+- Check out the [tutorials](_{{cookiecutter.project_slug}}_tutorials/README.md)
 
 ## Want to Contribute?
 

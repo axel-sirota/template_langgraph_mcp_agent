@@ -53,7 +53,7 @@ You → Write structured YAML → Run Python code → Get results
 
 ## How This Framework Helps
 
-We've created tools (in `_ai_workflows_packages/ai_workflows/`) that help you:
+We've created tools (in `_{{cookiecutter.project_slug}}_packages/{{cookiecutter.project_slug}}/`) that help you:
 
 1. **Keep Writing Simple Instructions**
    ```yaml
@@ -77,7 +77,7 @@ We've created tools (in `_ai_workflows_packages/ai_workflows/`) that help you:
 3. **Run Anywhere**
    ```python
    # Simple Python code to execute your workflow
-   from ai_workflows import Workflow
+   from {{cookiecutter.project_slug}} import Workflow
    
    workflow = Workflow('config.yaml', 'instructions.yaml')
    result = workflow.run()
@@ -91,7 +91,7 @@ Let's look at a real example that:
 - Suggests new answers
 
 ### 1. First, Try It as a Text Workflow
-In `_ai_workflows/code_based/faq_analysis/_text/`:
+In `_{{cookiecutter.project_slug}}/code_based/faq_analysis/_text/`:
 
 1. **Write Simple Instructions**
    ```markdown
@@ -108,7 +108,7 @@ In `_ai_workflows/code_based/faq_analysis/_text/`:
    - Refine as needed
 
 ### 2. Then, Try It as Code
-In `_ai_workflows/code_based/faq_analysis/_code/`:
+In `_{{cookiecutter.project_slug}}/code_based/faq_analysis/_code/`:
 
 1. **Same Instructions, More Structure**
    ```yaml
@@ -142,7 +142,7 @@ But the code version:
    ```bash
    # Get the code
    git clone https://github.com/cbardyn/ai-swiss-workflows
-   cd _ai_workflows_packages/ai_workflows
+   cd _{{cookiecutter.project_slug}}_packages/{{cookiecutter.project_slug}}
    
    # Install dependencies
    poetry install
@@ -151,7 +151,7 @@ But the code version:
 
 2. **Run the Example**
    ```bash
-   cd ../../_ai_workflows/code_based/faq_analysis/_code
+   cd ../../_{{cookiecutter.project_slug}}/code_based/faq_analysis/_code
    python run.py
    ```
 
@@ -176,8 +176,8 @@ But the code version:
 - You want independence from AI assistants
 
 ## Learn More
-- Framework details: `_ai_workflows_packages/ai_workflows/README.md`
-- Examples: `_ai_workflows/code_based/*/README.md`
+- Framework details: `_{{cookiecutter.project_slug}}_packages/{{cookiecutter.project_slug}}/README.md`
+- Examples: `_{{cookiecutter.project_slug}}/code_based/*/README.md`
 
 ---
 

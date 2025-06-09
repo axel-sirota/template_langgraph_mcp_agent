@@ -17,19 +17,19 @@ Découvrez pourquoi les interfaces IA orientées développeurs comme Cursor AI s
 📺 **Voir le tutoriel** : [Maîtriser Cursor AI](https://www.youtube.com/watch?v=niPQvA7uxxk)
 
 ### 2. Workflows IA à l'échelle
-Situé dans `2_ai_workflows/`
+Situé dans `2_{{cookiecutter.project_slug}}/`
 
 Transformez des prompts IA expérimentaux en workflows robustes prêts pour la production. Apprenez des stratégies éprouvées pour maintenir la qualité et la cohérence dans toute votre organisation.
 
-**Commencez ici** : `2_ai_workflows/tutorial_fr.md`  
+**Commencez ici** : `2_{{cookiecutter.project_slug}}/tutorial_fr.md`  
 📺 **Voir le tutoriel** : [Construire des workflows IA pour la production](https://youtu.be/YRzHOVCkmA0)
 
 ### 3. Workflows IA en code
-Situé dans `3_ai_workflows_as_code/`
+Situé dans `3_{{cookiecutter.project_slug}}_as_code/`
 
 Portez vos workflows IA au niveau supérieur avec les meilleures pratiques du génie logiciel. Apprenez à créer des solutions maintenables, versionnées et évolutives qui grandissent avec vos besoins.
 
-**Commencez ici** : `3_ai_workflows_as_code/tutorial_fr.md`  
+**Commencez ici** : `3_{{cookiecutter.project_slug}}_as_code/tutorial_fr.md`  
 📺 **Voir la série** : [Chaîne AI Swiss](https://www.youtube.com/@A-Iswiss)
 
 ## 🎓 À propos de Brain2Brain.Lab

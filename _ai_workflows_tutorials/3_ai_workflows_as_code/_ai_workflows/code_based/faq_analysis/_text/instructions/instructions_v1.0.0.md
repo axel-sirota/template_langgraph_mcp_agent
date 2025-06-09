@@ -24,7 +24,7 @@ Analyze an existing FAQ, identify uncovered questions, and generate answer sugge
 
 ### Output
 
-IMPORTANT: Create all your files in the existing folder `2024-12_workflows_ia_code/_ai_workflows/code_based/faq_analysis/_text/` and subfolder `_output/`. Nowhere else.
+IMPORTANT: Create all your files in the existing folder `2024-12_workflows_ia_code/_{{cookiecutter.project_slug}}/code_based/faq_analysis/_text/` and subfolder `_output/`. Nowhere else.
 
 ## Tasks
 

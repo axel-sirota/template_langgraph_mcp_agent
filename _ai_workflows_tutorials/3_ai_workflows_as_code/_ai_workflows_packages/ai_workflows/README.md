@@ -14,7 +14,7 @@ This framework helps you convert text-based AI workflows into Python code. It:
 ## Quick Example
 
 ```python
-from ai_workflows import Workflow
+from {{cookiecutter.project_slug}} import Workflow
 
 # Create a workflow from your instructions
 workflow = Workflow(
@@ -26,7 +26,7 @@ workflow = Workflow(
 result = workflow.run()
 ```
 
-See the [existing code-based workflows](_ai_workflows/code_based) for more concrete examples.
+See the [existing code-based workflows](_{{cookiecutter.project_slug}}/code_based) for more concrete examples.
 
 ## Core Components
 
@@ -60,7 +60,7 @@ llm:
    ```bash
    # Get the code
    git clone https://github.com/cbardyn/ai-swiss-workflows
-   cd _ai_workflows_packages/ai_workflows
+   cd _{{cookiecutter.project_slug}}_packages/{{cookiecutter.project_slug}}
 
    # Install dependencies
    poetry install
@@ -98,7 +98,7 @@ llm:
 
 ### 3. Run Your Workflow
 ```python
-from ai_workflows import setup_logging, Workflow
+from {{cookiecutter.project_slug}} import setup_logging, Workflow
 
 # Set up logging (optional but helpful)
 setup_logging()

@@ -14,7 +14,7 @@ The workflow itself and what it does is defined in the YAML files:
 import logging
 from pathlib import Path
 
-from ai_workflows import setup_logging, Workflow
+from {{cookiecutter.project_slug}} import setup_logging, Workflow
 
 
 def main() -> None:

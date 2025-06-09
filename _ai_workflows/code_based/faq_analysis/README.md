@@ -50,7 +50,7 @@ python run.py
 ## ⚠️ Before You Start
 
 1. **Set Up Python Environment**
-   - Follow the [setup guide](_ai_workflows_packages/ai_workflows/README.md)
+   - Follow the [setup guide](_{{cookiecutter.project_slug}}_packages/{{cookiecutter.project_slug}}/README.md)
    - Make sure to activate the Python environment after installation
 
 2. **Get API Access**
@@ -63,7 +63,7 @@ python run.py
        api_key: "your-api-key-here"  # Replace with your actual key
      ```
 
-Need help? Check the [tutorial](_ai_workflows_tutorials/3_ai_workflows_as_code/) for more information.
+Need help? Check the [tutorial](_{{cookiecutter.project_slug}}_tutorials/3_{{cookiecutter.project_slug}}_as_code/) for more information.
 
 ## Compare the Results 📊
 

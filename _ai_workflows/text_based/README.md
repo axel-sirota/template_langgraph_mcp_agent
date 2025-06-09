@@ -1,1 +1,1 @@
-See examples in `_ai_workflows_tutorials/2_ai_workflows`.
+See examples in `_{{cookiecutter.project_slug}}_tutorials/2_{{cookiecutter.project_slug}}`.

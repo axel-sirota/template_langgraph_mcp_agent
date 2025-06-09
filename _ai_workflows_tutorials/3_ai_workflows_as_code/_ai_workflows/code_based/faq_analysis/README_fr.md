@@ -50,7 +50,7 @@ python run.py
 ## ⚠️ Avant de commencer
 
 1. **Configurez l'environnement Python**
-   - Suivez le [guide d'installation](_ai_workflows_packages/ai_workflows/README.md)
+   - Suivez le [guide d'installation](_{{cookiecutter.project_slug}}_packages/{{cookiecutter.project_slug}}/README.md)
    - Assurez-vous d'activer l'environnement Python après l'installation
 
 2. **Obtenez un accès API**
@@ -63,7 +63,7 @@ python run.py
        api_key: "votre-clé-api-ici"  # Remplacez par votre vraie clé
      ```
 
-Besoin d'aide ? Consultez le [tutoriel](_ai_workflows_tutorials/3_ai_workflows_as_code/) pour plus d'informations.
+Besoin d'aide ? Consultez le [tutoriel](_{{cookiecutter.project_slug}}_tutorials/3_{{cookiecutter.project_slug}}_as_code/) pour plus d'informations.
 
 ## Comparez les résultats 📊
 

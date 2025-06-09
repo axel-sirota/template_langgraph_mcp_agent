@@ -10,13 +10,13 @@ Générer les fichiers nécessaires pour un nouveau workflow, en s'inspirant des
 
 ## Besoins
 
-IMPORTANT : Crée ces fichiers dans le dossier `_ai_workflows/factory/new_workflow/` existant, dans un sous-dossier `_generated/<nom_du_workflow>/` :
+IMPORTANT : Crée ces fichiers dans le dossier `_{{cookiecutter.project_slug}}/factory/new_workflow/` existant, dans un sous-dossier `_generated/<nom_du_workflow>/` :
 - Un nouveau fichier `run.md`
 - Un dossier `instructions` contenant un fichier `instructions_v1.0.0.md`
 
 Structure de dossier à créer :
   ```
-  _ai_workflows/factory/new_workflow/_generated/
+  _{{cookiecutter.project_slug}}/factory/new_workflow/_generated/
     <nom_du_workflow>/
       instructions/
         instructions_v1.0.0.md

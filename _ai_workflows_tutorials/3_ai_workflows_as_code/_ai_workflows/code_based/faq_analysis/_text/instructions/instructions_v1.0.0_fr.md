@@ -24,7 +24,7 @@ Analyser une FAQ existante, identifier les questions non couvertes, et générer
 
 ### Output
 
-IMPORTANT : Crée tous tes fichiers dans le dossier existant `2024-12_workflows_ia_code/_ai_workflows/code_based/faq_analysis/_text/` et sous-dossier `_output/`. Pas ailleurs.
+IMPORTANT : Crée tous tes fichiers dans le dossier existant `2024-12_workflows_ia_code/_{{cookiecutter.project_slug}}/code_based/faq_analysis/_text/` et sous-dossier `_output/`. Pas ailleurs.
 
 ## Tâches
 
