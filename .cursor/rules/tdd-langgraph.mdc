@@ -1,0 +1,11 @@
+---
+description: Enforce TDD-first development and LangGraph+MCP best practices
+alwaysApply: true
+globs: ["**/*.py"]
+---
+
+- Before writing or refactoring code, **generate or update pytest tests**.
+- Reject changes if `pytest -q` reports failures.
+- Use **LangGraph** for orchestration and load **MCP** tools via `langchain_mcp_adapters`.
+- Format code with **Black** and lint with **Ruff**.
+- Ignore files matched in `.cursorignore`.
