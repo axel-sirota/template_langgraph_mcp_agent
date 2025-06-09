@@ -15,7 +15,7 @@ requires-python = ">=3.10"
 
 dependencies = [
   "langgraph>=0.0.43",                 # graph runtime 
-  "langgraph-mcp-adapters>=0.1.2",     # MCP→LangGraph bridge 
+  "langchain-mcp-adapters>=0.1.2",     # MCP→LangGraph bridge 
   "mcp-client>=0.4.4",                 # talks to MCP servers 
   "pytest", "pytest-asyncio",          # TDD harness 
   "ruff", "black"                      # code-quality tools
