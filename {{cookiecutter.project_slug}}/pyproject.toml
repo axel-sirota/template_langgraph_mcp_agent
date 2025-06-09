@@ -5,6 +5,9 @@ build-backend = "hatchling.build"
 [tool.hatch.build.targets.wheel]
 packages = ["src/{{cookiecutter.project_slug}}"]
 
+[tool.hatch.version]
+"/src/{{cookiecutter.project_slug}}/__init__.py"
+
 [project]
 name = "{{cookiecutter.project_slug}}"
 dynamic = ["version"]
@@ -16,9 +19,10 @@ dependencies = [
   "langgraph>=0.0.43",                 # graph runtime 
   "langchain-mcp-adapters>=0.1.7",     # MCP→LangGraph bridge 
   "mcp[cli]>=1.9.0",                 # talks to MCP servers 
-  "a2a-protocol>=0.2.1",
+  "a2a-protocol @ git+https://github.com/google/a2a-protocol.git",
   "pytest", "pytest-asyncio",          # TDD harness 
-  "ruff", "black"                      # code-quality tools
+  "ruff", "black", "bandit", "mipy", "tox"                      # 
+code-quality tools
 ]
 
 [tool.ruff]
