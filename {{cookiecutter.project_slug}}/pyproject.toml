@@ -29,3 +29,7 @@ dependencies = [
   "ruff", "black"                      # code-quality tools
 ]
 
+[tool.ruff]
+select = ["E","F","I","D","B"]
+[tool.bandit]
+skips = ["B101","B311"]
