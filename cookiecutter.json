@@ -1,1 +1,5 @@
-{ "project_slug":"template_langgraph_mcp_agent" }
+{
+  "project_slug": "template_langgraph_mcp_agent",
+  "project_name": "LangGraph MCP Agent",
+  "author": "YOUR NAME"
+}
