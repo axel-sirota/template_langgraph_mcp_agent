@@ -8,3 +8,12 @@ development.
 “Use this template” or run
 > `cookiecutter gh:axel-sirota/template_langgraph_mcp_agent`.
 
+## How this repo does TDD
+
+* Write feature scenarios as markdown bullet-points under `tests/specs/`.
+* Run `pytest -q` – it will fail.
+* Ask Cursor to “Generate tests from specs”, then “Make code pass the 
+tests”.
+
+Rules live in `.cursor/rules/best-practices.mdc`; **asserts must never be
+commented out** – fix failing tests instead.
