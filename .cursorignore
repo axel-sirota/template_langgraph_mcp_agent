@@ -1,0 +1,4 @@
+# Large or generated directories Cursor shouldn't index
+.venv/
+dist/
+build/
