@@ -17,6 +17,7 @@ dependencies = [
   "langgraph>=0.0.43",                 # graph runtime 
   "langchain-mcp-adapters>=0.1.2",     # MCP→LangGraph bridge 
   "mcp[cli]>=1.9.0",                 # talks to MCP servers 
+  "a2a-protocol>=0.2.1",
   "pytest", "pytest-asyncio",          # TDD harness 
   "ruff", "black"                      # code-quality tools
 ]
